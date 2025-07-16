@@ -1,0 +1,48 @@
+/* Container for the tweet form */
+.new-tweet {
+  text-align: center;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 600px;
+  font-family: sans-serif;
+}
+
+/* Textarea styling */
+#tweet-text {
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #524e46;
+  font-size: 1.5em;
+  padding: 1em;
+  resize: none;
+  background-color: #f5f2ed;
+  color: #333;
+}
+
+/* Styling the submit button */
+.new-tweet button {
+  background-color: #4056A1;
+  color: white;
+  font-weight: bold;
+  padding: 0.6em 1.2em;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+
+/* Flex layout for button and counter */
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+/* Character counter */
+.counter {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #524e46;
+}

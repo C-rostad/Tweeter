@@ -29,7 +29,7 @@ body {
  main {
   display: flex;
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: inherit;
   justify-content: center;
   align-items: center;
   flex-direction: column;
