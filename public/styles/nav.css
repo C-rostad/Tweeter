@@ -9,6 +9,8 @@ nav {
   padding: 0 1.5em;
   box-sizing: border-box;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
 }
 
 nav span {
@@ -16,11 +18,13 @@ nav span {
 }
 
 .write-tweet {
+  display: flex;
   text-align: center;
   font-family: 'Bungee', sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .icon {
