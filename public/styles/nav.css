@@ -1,0 +1,30 @@
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+span {
+  font-family: 'Bungee', sans-serif;
+}
+
+.write-tweet {
+  text-align: center;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 0.2em;
+  color: #FF0000;
+}
