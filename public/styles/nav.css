@@ -20,6 +20,7 @@ span {
   font-family: 'Bungee', sans-serif;
   font-size: 1rem;
   cursor: pointer;
+  align-items: flex-end;
 }
 
 .icon {
