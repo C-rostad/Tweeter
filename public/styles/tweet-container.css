@@ -1,0 +1,154 @@
+/* General styles */
+body {
+  background-color: #f5f5dc;
+  font-family: sans-serif;
+  color: #524e46;
+  margin: 0;
+  padding: 2em;
+}
+
+/* Tweet Form */
+.new-tweet {
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+  padding: 1em;
+  background-color: #f5f5dc;
+}
+
+.new-tweet h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* Textarea styling */
+#tweet-text {
+  width: 100%;
+  padding: 1em;
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 5px solid #524e46;
+  resize: none;
+  background-color: #f5f5dc;
+  outline: none;
+}
+
+/* Tweet form footer */
+.new-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+/* Tweet button */
+button[type="submit"] {
+  background-color: #4056A1;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.counter {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Tweet Container */
+#tweet-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f5f5dc;
+}
+
+/* Individual Tweet */
+article.tweet {
+  border: 3px solid #524e46;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f5f5dc;
+  transition: box-shadow 0.3s ease;
+}
+
+article.tweet:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Header with user info */
+article.tweet header {
+  display: flex;
+  height: auto;
+  min-height: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* remove beige background here */
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-handle {
+  color: #524e46;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* Tweet text */
+.tweet-text {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* Footer with icons and date */
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #524e46;
+  padding-top: 0.5em;
+}
+
+.tweet-date {
+  font-size: 0.9em;
+}
+
+.tweet-actions {
+  display: flex;
+  gap: 1em;
+}
+
+.tweet-actions i {
+  color: #4056A1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tweet-actions i:hover {
+  color: #d9534f; /* redish tone for emphasis */
+  transform: scale(1.2);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
