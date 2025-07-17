@@ -46,3 +46,7 @@
   font-size: 1.3em;
   color: #524e46;
 }
+
+.counter.negative {
+  color: #FF0000;
+}
