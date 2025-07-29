@@ -49,7 +49,7 @@ $(document).ready(function() {
 
     for (const tweet of tweets) {
       const $tweetElement = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweetElement); // Newest first
+      $('#tweets-container').prepend($tweetElement.hide().slideDown('fast')); // Newest first
     }
   };
 
