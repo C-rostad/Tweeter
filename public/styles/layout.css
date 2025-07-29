@@ -14,23 +14,122 @@ html {
  * Global layout stuff
  */
 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
-  padding-top: 120px;
+  padding: 0;
+  margin: 0;
 }
 
+.page-content {
+  padding-top: 120px; /* push content below nav */
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  display: flex;
-  width: 90%;
-  background-color: inherit;
-  justify-content: center;
-  align-items: center;
+/* Base styles: Mobile-first (0–480px) */
+main {
   flex-direction: column;
- }
+  align-items: center;
+  padding: 10px;
+}
+
+/* Medium devices (tablets, 481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  main.container {
+    align-items: center;
+    width: 95%;
+    padding: 20px;
+  }
+
+  .tweet {
+    font-size: 1rem;
+  }
+
+  nav .write-tweet {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+/* Larger tablets & small desktops (769px–1279px) */
+@media (min-width: 769px) and (max-width: 1279px) {
+  main.container {
+    width: 85%;
+    margin: 0 auto;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;     /* Center children horizontally */
+    gap: 20px;
+  }
+
+  .new-tweet, #tweets-container {
+    width: 80%;
+    max-width: 700px;
+  }
+
+  #tweets-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tweet {
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* Large desktops (1280px and up) */
+@media (min-width: 1280px) {
+  main.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .left-column {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-column > header {
+    width: 100%;
+    height: auto; /* or a flexible height */
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: aquamarine;
+    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* some padding instead of fixed height */
+  }
+
+  #tweets-container {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

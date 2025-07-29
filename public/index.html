@@ -31,63 +31,66 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-<nav>
-  <span>tweeter</span>
-  <div class="write-tweet">
-    <div>Write a new tweet</div>
-    <i class="fa-solid fa-angles-down icon"></i>
-  </div>
-</nav>
+<body>
+  <!-- Top nav bar -->
+  <nav>
+    <span>tweeter</span>
+    <div class="write-tweet">
+      <div>Write a new tweet</div>
+      <i class="fa-solid fa-angles-down icon"></i>
+    </div>
+  </nav>
 
-  <header>
-  <div>
-    <img src="/images/profile-hex.png" alt="User profile avatar">
-  </div>
-  <br>
-  <div>
-    <h2>Your Name</h2>
-  </div>
-  </header>
-
-
-    <!-- Page-specific (main) content here -->
+  <div class="page-content">
     <main class="container">
-      <section class="new-tweet">
-      <div class="error" style="display: none; color: red;"></div>
-      <h2>Compose Tweet</h2>
-      <form id="tweet-form" action="/api/tweets" method="POST">
-      <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-      <div>
-      <button type="submit">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-  </form>
-</section>
-    <section id = "tweets-container">
-<article class="tweet">
-  <header>
-    <div class="user-info">
-      <img src="/images/profile-hex.png" alt="User avatar">
-      <span class="user-name">Newton</span>
-      <span class="user-handle">@Sirlsaac</span>
-    </div>
-  </header>
+      <section class="left-column">
+        <header>
+          <div>
+            <img src="/images/profile-hex.png" alt="User profile avatar" />
+          </div>
+          <div>
+            <h2>Your Name</h2>
+          </div>
+        </header>
 
-  <p class="tweet-text">If I have seen further it is by standing on the shoulders of giants</p>
+        <section class="new-tweet">
+          <div class="error" style="display: none; color: red;"></div>
+          <h2>Compose Tweet</h2>
+          <form id="tweet-form" action="/api/tweets" method="POST">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+      </section>
 
-  <footer>
-    <span class="tweet-date">10 days ago</span>
-    <div class="tweet-actions">
-      <i class="fa fa-flag"></i>
-      <i class="fa fa-retweet"></i>
-      <i class="fa fa-heart"></i>
-    </div>
-  </footer>
-</article>
+      <section id="tweets-container">
+        <article class="tweet">
+          <header>
+            <div class="user-info">
+              <img src="/images/profile-hex.png" alt="User avatar" />
+              <span class="user-name">Newton</span>
+              <span class="user-handle">@Sirlsaac</span>
+            </div>
+          </header>
 
-    </section>
+          <p class="tweet-text">
+            If I have seen further it is by standing on the shoulders of giants
+          </p>
+
+          <footer>
+            <span class="tweet-date">10 days ago</span>
+            <div class="tweet-actions">
+              <i class="fa fa-flag"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
-  </body>
+  </div>
+</body>
 </html>

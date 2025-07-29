@@ -1,16 +1,19 @@
 
+
+/* Navigation Bar */
 nav {
   height: 120px;
-  width: 100vw;
+  width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
   align-items: center;
-  padding: 0 1.5em;
-  box-sizing: border-box;
   justify-content: space-between;
+  padding: 0 1.5em;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 nav span {
@@ -19,12 +22,12 @@ nav span {
 
 .write-tweet {
   display: flex;
+  flex-direction: column;
   text-align: center;
   font-family: 'Bungee', sans-serif;
   font-size: 1rem;
   cursor: pointer;
   align-items: center;
-  flex-direction: column;
 }
 
 .icon {
