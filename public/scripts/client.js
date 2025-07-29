@@ -43,6 +43,15 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
+// Hover effect for tweet icons
+  $(document).on('mouseenter', '.icons i', function() {
+    $(this).css('color', '#1da1f2');
+  });
+
+  $(document).on('mouseleave', '.icons i', function() {
+    $(this).css('color', '#555');
+  });
+  
   // Renders all tweets in the array to the #tweets-container
   const renderTweets = function(tweets) {
     $('#tweets-container').empty(); // Clear old tweets

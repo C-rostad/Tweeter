@@ -11,7 +11,7 @@ html {
 }
 
 /*
- * Global layout stuff
+ * Global layout
  */
 
  * {
@@ -30,11 +30,10 @@ body {
 }
 
 .page-content {
-  padding-top: 120px; /* push content below nav */
+  padding-top: 120px;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+
 
 /* Base styles: Mobile-first (0–480px) */
 main {

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // --- our code goes here ---
   const chars = 140
   $("textarea").on("input", function () {
 

@@ -136,19 +136,3 @@ article.tweet footer {
   gap: 1em;
 }
 
-.tweet-actions i {
-  color: #4056A1;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.tweet-actions i:hover {
-  color: #d9534f; /* redish tone for emphasis */
-  transform: scale(1.2);
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
