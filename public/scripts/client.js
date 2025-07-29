@@ -67,17 +67,45 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-// Renders all tweets in the array to the #tweets-container
-const renderTweets = function(tweets) {
-  $('#tweets-container').empty(); // Clear old tweets
-
-  for (const tweet of tweets) {
-    const $tweetElement = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweetElement); // Newest first
-  }
-};
-
-// Ensure DOM is ready before rendering
 $(document).ready(function() {
-  renderTweets(data);
+  // Renders all tweets in the array to the #tweets-container
+  const renderTweets = function(tweets) {
+    $('#tweets-container').empty(); // Clear old tweets
+
+    for (const tweet of tweets) {
+      const $tweetElement = createTweetElement(tweet);
+      $('#tweets-container').prepend($tweetElement); // Newest first
+    }
+  };
+
+  // Define the function to fetch and render tweets
+  const loadTweets = function() {
+    $.get('/api/tweets')
+      .then((tweets) => {
+        renderTweets(tweets);
+      })
+      .catch((err) => {
+        console.error('Error loading tweets:', err);
+      });
+  };
+
+  // Handle tweet form submission
+  $('#tweet-form').on('submit', function(event) {
+    event.preventDefault();
+
+    const serializedData = $(this).serialize();
+
+    $.post('/api/tweets', serializedData)
+      .then(() => {
+        $('#tweet-text').val('');
+        $('.counter').text(140);
+        loadTweets(); // Reload tweets after successful post
+      })
+      .catch((err) => {
+        console.error('Failed to submit tweet:', err);
+      });
+  });
+
+  // Initial page load
+  loadTweets();
 });

@@ -31,27 +31,6 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/api/tweets", tweetsRoutes);
 
-$(document).ready(function() {
-  // Handle tweet form submission
-  $('#tweet-form').on('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission (page reload)
-
-    const serializedData = $(this).serialize();
-    $.post('/api/tweets', serializedData)
-    .then(() => {
-        // Clear the textarea
-    $('#tweet-text').val('');
-
-        // Reset character counter
-    $('.counter').text(140);
-
-    })
-    .catch((err) => {
-      console.error('Failed to submit tweet:', err);
-    });
-  });
-  });
-});
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
