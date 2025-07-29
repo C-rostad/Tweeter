@@ -69,10 +69,11 @@ const createTweetElement = function(tweet) {
 
 // Renders all tweets in the array to the #tweets-container
 const renderTweets = function(tweets) {
-  $('#tweets-container').empty(); // Optional: clear existing tweets
+  $('#tweets-container').empty(); // Clear old tweets
+
   for (const tweet of tweets) {
     const $tweetElement = createTweetElement(tweet);
-    $('#tweets-container').append($tweetElement);
+    $('#tweets-container').prepend($tweetElement); // Newest first
   }
 };
 
