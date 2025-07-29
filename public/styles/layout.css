@@ -102,6 +102,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
+    align-items: flex-start;
   }
 
   .left-column {
@@ -109,6 +110,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: flex-start;
   }
 
   .left-column > header {

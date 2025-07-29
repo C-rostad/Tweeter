@@ -6,7 +6,7 @@
 
 
 // Function to prevent XSS by escaping user input
-const escape = function (str) {
+const escape = function(str) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -69,39 +69,39 @@ $(document).ready(function() {
     event.preventDefault();
 
     
-  const $textarea = $('#tweet-text');
-  const tweetContent = $textarea.val().trim();
+    const $textarea = $('#tweet-text');
+    const tweetContent = $textarea.val().trim();
 
-  // Clear previous error
-  $('.error').slideUp().text('');
+    // Clear previous error
+    $('.error').slideUp().text('');
 
-  // Validation: empty tweet
-  if (!tweetContent) {
-    $('.error')
-      .text('⚠️ Tweet cannot be empty!')
-      .slideDown();
-    return; // Stop submission
-  }
+    // Validation: empty tweet
+    if (!tweetContent) {
+      $('.error')
+        .text('⚠️ Tweet cannot be empty!')
+        .slideDown();
+      return; // Stop submission
+    }
 
-  // Validation: tweet too long
-  if (tweetContent.length > 140) {
-    $('.error')
-      .text('⚠️ Tweet exceeds 140 characters!')
-      .slideDown();
-    return; // Stop submission
-  }
+    // Validation: tweet too long
+    if (tweetContent.length > 140) {
+      $('.error')
+        .text('⚠️ Tweet exceeds 140 characters!')
+        .slideDown();
+      return; // Stop submission
+    }
 
     const serializedData = $(this).serialize();
 
     $.post('/api/tweets', serializedData)
       .then(() => {
       // Clear the tweet input
-      $('#tweet-text').val('');
+        $('#tweet-text').val('');
 
-      // Reset character counter
-      $('.counter').text(140);
+        // Reset character counter
+        $('.counter').text(140);
 
-      // Reload tweets
+        // Reload tweets
         loadTweets();
         $('#tweets-container').slideDown('fast');
       })
